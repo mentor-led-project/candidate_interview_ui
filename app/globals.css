@@ -200,7 +200,7 @@ body {
   justify-content: flex-end;
 }
 
-.scoreContainer {
+.score-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -250,4 +250,10 @@ body {
 .fail-message {
   color: #ef4444;
   font-weight: 500;
+}
+
+@media (max-width: 375px) {
+  .header h2 {
+    font-size: 16px;
+  }
 }

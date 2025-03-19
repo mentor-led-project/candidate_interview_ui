@@ -29,7 +29,7 @@ const Result = () => {
     <div className='result-card'>
       <h1 className='title'>Interview Complete!</h1>
       <h2 className='subtitle'>
-        You've completed all questions for {result.profession}
+        You&apos;ve completed all questions for {result.profession}
       </h2>
       
       <div className='scoreContainer'>
@@ -42,7 +42,7 @@ const Result = () => {
       
       <div className='feedback'>
         {percentage >= 70 ? (
-          <p className='success-message'>Great job! You've passed the interview.</p>
+          <p className='success-message'>Great job! You&apos;ve passed the interview.</p>
         ) : (
           <p className='fail-message'>You might need more practice. Try again!</p>
         )}
