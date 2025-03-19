@@ -32,7 +32,7 @@ const Result = () => {
         You&apos;ve completed all questions for {result.profession}
       </h2>
       
-      <div className='scoreContainer'>
+      <div className='score-container'>
         <div className='score-circle'>
           <span className='score'>{result.score}</span>
           <span className='total-score'>/{result.totalQuestions}</span>
