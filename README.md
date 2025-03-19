@@ -1,33 +1,59 @@
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+## Candidate Interview App
 
-First, run the development server:
+An interactive web app built with Next.js, TypeScript, and Firebase that simulates a tech interview for candidates based on selected professional fields.
+
+### Features
+
+- 🔍 5 Tech Fields (e.g., Frontend, Backend, DevOps, etc.)
+- 🎯 5 Random Questions per field (e.g., Frontend includes React, JS, HTML, etc.)
+- ⏱️ 60-second Countdown Timer per question
+- ✅ Multiple Choice Questions (MCQs)
+- 📊 Score Summary at the end
+- 🔥 Fetched in real-time from Firebase Firestore
+- 💅 Clean and responsive external CSS styling
+
+### Tech Stack
+
+- Next.js
+- Tyescript
+- Firebase
+- CSS
+
+#### How It Works
+
+- Select a Tech Field on the homepage.
+- Fetch 5 random questions related to that field from Firestore.
+- For each question:
+- Show options
+- Start a 60-second timer
+- User selects an answer and clicks Next
+- After 5 questions:
+- Show final score
+
+**Hint: show correct answers wwhen selected answers are incorrect**
+
+##### Timer Logic
+
+Each question has a 60-second countdown. When the timer reaches 0, the app:
+
+- Locks the current question
+- Moves to the next question automatically marks unanswered if no option was selected
+
+###### Scoring System
+
+- Each correct answer = ✅ 1 mark
+- Incorrect/unanswered = ❌ 0 mark
+- Total score shown as X / 5 at the end
 
 ```bash
+git clone 'https://github.com/mentor-led-project/candidate_interview_ui.git'
+cd candidate-interview
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 
